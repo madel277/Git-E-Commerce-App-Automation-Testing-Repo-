@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="364.193">
+<testcase classname="user could register with valid data" name="user could register with valid data" time="35.9">
+<system-out><![CDATA[And user navigates to register page.........................................passed
+When user chooses Female as Gender..........................................passed
+And user fills in first name with "Jane"....................................passed
+And user fills in last name with "Doe"......................................passed
+And user chooses as birthdate "1" as day and "2" as month and "1990" as year.passed
+And user enters email "joe.doe@gmail.com"...................................passed
+And user fills in company name with " ".....................................passed
+And user chooses Newsletter.................................................passed
+And user fills in password with "password"..................................passed
+And user fills in password confirmation with "password".....................passed
+And user clicks on register button..........................................passed
+Then user could register successfully.......................................passed
+And user clicks on continue button..........................................passed
+And user goes to the home page..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could log in with valid email and password" name="user could log in with valid email and password" time="18.897">
+<system-out><![CDATA[And user navigates to login page............................................passed
+When user fills in email with "jane.doe@gmail.com" and password with "password".passed
+And user chooses remember me................................................passed
+And user clicks on login button.............................................passed
+Then user could login successfully and goes to the home page................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could reset his/her password successfully" name="user could reset his/her password successfully" time="19.627">
+<system-out><![CDATA[And user enters login page..................................................passed
+When user clicks on Forget Password?........................................passed
+And user types email "jane.doe@gmail.com"...................................passed
+And user clicks on recover button...........................................passed
+Then user resets password successfully......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="logged user could search for any product" name="logged user could search for any product using simple search text box" time="24.545">
+<system-out><![CDATA[And user goes to login page.................................................passed
+And user logs in with email "jane.doe@gmail.com" and password "password"....passed
+And user logs in by clicking login button...................................passed
+When user types "laptop" in search box......................................passed
+And user clicks on search button............................................passed
+Then user goes to search page...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="logged user could search for any product" name="logged user could search for any product using advanced search" time="27.688">
+<system-out><![CDATA[And user goes to login page.................................................passed
+And user logs in with email "jane.doe@gmail.com" and password "password"....passed
+And user logs in by clicking login button...................................passed
+When user fills in "laptop" in search box...................................passed
+And user clicks search button...............................................passed
+And user clicks on advanced search..........................................passed
+And user chooses "Computers" as Category....................................passed
+And user clicks on Automatically search sub categories......................passed
+And user chooses "HP" as Manufacturer.......................................passed
+And user chooses Search In product description..............................passed
+And user clicks on advanced search button...................................passed
+Then search result will be shown to user....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could switch between currencies US-Euro" name="logged user switch between currencies US-Euro" time="24.721">
+<system-out><![CDATA[And user types login page...................................................passed
+And user logs in with "jane.doe@gmail.com" and "password"...................passed
+And user clicks login button................................................passed
+When user searches for "macbook"............................................passed
+And user clicks search......................................................passed
+And user chooses currency "Euro" from currency dropbox......................passed
+Then user get price in Euro.................................................passed
+And user chooses currency "US Dollar" from currency dropbox.................passed
+And user get price in US Dollar.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could select different Categories" name="logged user could select different Categories" time="21.869">
+<system-out><![CDATA[And user moves to login page................................................passed
+And user enters "jane.doe@gmail.com" and "password".........................passed
+And user clicks on button to login..........................................passed
+When user selects category Electronics......................................passed
+And user selects subcategory Cell phones....................................passed
+Then user gets all cellphones shown.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could filter with color" name="logged user could filter with color" time="22.568">
+<system-out><![CDATA[And user moves to page to login.............................................passed
+And enters "jane.doe@gmail.com" and "password"..............................passed
+And clicks on button to login...............................................passed
+When user selects category Apparel..........................................passed
+And user selects subcategory Shoes..........................................passed
+And user selects color red..................................................passed
+Then user gets all offered red shoes........................................passed
+And user selects color grey.................................................passed
+And user gets all offered red and grey shoes................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could select different tags" name="logged user could select different tags" time="23.166">
+<system-out><![CDATA[And moves to login page.....................................................passed
+And enters "jane.doe@gmail.com" "password"..................................passed
+And clicks on login.........................................................passed
+When user selects category Computers........................................passed
+And user selects tag compact................................................passed
+Then user gets all products tagged with compact.............................passed
+And user selects tag camera.................................................passed
+And user gets all products tagged with camera...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could add different products to Shopping cart" name="logged user could add different products to Shopping cart" time="28.855">
+<system-out><![CDATA[And enters login page.......................................................passed
+And keys in "jane.doe@gmail.com" and "password".............................passed
+And user could click the button to login....................................passed
+When user clicks on Category Jewelry........................................passed
+And user adds Bracelet to the Shopping cart.................................passed
+Then user adds product successfully.........................................passed
+Then user clicks on Category Books..........................................passed
+And user adds Pride and Prejudice to the Shopping cart......................passed
+And user adds second product successfully to Shopping cart..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could add different products to Wishlist" name="logged user could add different products to WishList" time="35.744">
+<system-out><![CDATA[And enters the login page...................................................passed
+And keys in "jane.doe@gmail.com", "password"................................passed
+And user click the login button.............................................passed
+When user selects Category Electronics......................................passed
+And user selects subCategory Cellphones.....................................passed
+And user adds a Nokia Lumia to the WishList.................................passed
+Then user adds product successfully to WishList.............................passed
+And user chooses Category Computers.........................................passed
+And user chooses subCategory Notebooks......................................passed
+And user adds HP Notebook to WishList.......................................passed
+And user adds second product successfully to WishList.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could add different products to compare list" name="logged user could add different products to compareList" time="27.568">
+<system-out><![CDATA[And user enters the login page..............................................passed
+And user keys in "jane.doe@gmail.com", "password"...........................passed
+And user click login button.................................................passed
+When user chooses Category Electronics......................................passed
+And user chooses subCategory Cellphones.....................................passed
+And user adds a HTC One to the compareList..................................passed
+Then user adds product successfully to compareList..........................passed
+And user adds Nokia Lumia to compareList....................................passed
+And user adds second product successfully to compareList....................passed
+]]></system-out>
+</testcase>
+<testcase classname="user creates successful order" name="user creates successful order" time="47.956">
+<system-out><![CDATA[And user navigates to homepage..............................................passed
+When user selects Category Jewelry..........................................passed
+And user adds Flower Girl Bracelet to the Shopping cart.....................passed
+And user goes to the Shopping cart..........................................passed
+And user agrees with terms of service.......................................passed
+And user clicks on checkout button..........................................passed
+And user chooses Checkout as a Guest........................................passed
+And user enters first name "Max"............................................passed
+And user enters last name "Miller"..........................................passed
+And user fills in email "max.miller@email.com"..............................passed
+And user selects Country "Egypt"............................................passed
+And user enters City "Cairo"................................................passed
+And user enters Address 1 "XY Street".......................................passed
+And user enters postal code "00000".........................................passed
+And user enters Phone number "0123456789"...................................passed
+And user clicks Continue....................................................passed
+And user chooses Shipping method Next Day Air...............................passed
+And user chooses Continue button............................................passed
+And user chooses Payment method Credit Card.................................passed
+And user continues..........................................................passed
+And user enters Cardholder name "Max Miller"................................passed
+And user enters Card number "4548143477779796"..............................passed
+And user enters Expiration date "05"/"2026".................................passed
+And user enters Card code "552".............................................passed
+And users clicks again on Continue button...................................passed
+And user clicks on Confirm button...........................................passed
+Then user created order successfully........................................passed
+]]></system-out>
+</testcase>
+</testsuite>
